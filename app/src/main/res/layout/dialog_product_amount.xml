@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etManualProductAmount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789./ "
+        android:ems="10"
+        android:hint="Cnt."
+        android:inputType="datetime"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvProductNameDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Ingresar cantidad del producto:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductNameDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Producto"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etManualProductAmount"
+        app:layout_constraintEnd_toStartOf="@+id/etManualProductAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etManualProductAmount" />
+
+    <Button
+        android:id="@+id/btnUpdateProductAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelProductAmount"
+        app:layout_constraintTop_toBottomOf="@+id/etManualProductAmount" />
+
+    <Button
+        android:id="@+id/btnCancelProductAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:backgroundTint="@color/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpdateProductAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etManualProductAmount" />
+</androidx.constraintlayout.widget.ConstraintLayout>
